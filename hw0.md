@@ -6,6 +6,13 @@ ssh 学号@129.211.169.165 -p 6000
 3.	用linux指令实现所需功能，所有指令放在一个脚本文件中，并验证能够正确执行.验证方法是使用bash hw0_1.sh，观察结果是否输出正确，这里假设你的脚本文件名称是hw0_1.sh。功能如下，
     1.  You want to create a one-line file without having to use an editor.
     2.  You want to create a new directory by using the Terminal.
-    3. 
-
-4.	练习c语言编程：写一个“Hello World”程序，并且利用gcc等工具进行编译并运行，把输出结果保存到文件中，文件命名方式如上。
+    3.  You want to delete a file or directory using the Terminal.
+    4.  You need to change the permissions of a file.
+    5.  Sometimes Python libraries and another software are hosted on the GitHub website or other online Git repository(https://github.com/LeeWilli/emmbedded_development.git). You need to be able to fetch them onto your Raspberry Pi.
+    6.  You want to find a file that you know is on the system somewhere.
+    7.  You want to quickly create a file with some text or record a directory listing into a file.
+    8.  You have a number of text files, and you want to join them into one big file.
+    9.  You want to use the output of one Linux command as the input to another command.
+    10. You want to run a command, but you don’t want the output filling up your screen.
+    11. You want to create aliases (shortcuts) to commands that you use frequently.
+    
