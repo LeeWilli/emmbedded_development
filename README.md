@@ -1,1 +1,1 @@
-# emmbedded_development
+用于嵌入式应用开发的信息发布
