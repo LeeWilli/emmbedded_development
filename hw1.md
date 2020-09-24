@@ -15,4 +15,5 @@ ssh 学号@129.211.169.165 -p 6000
     9.  You want to use the output of one Linux command as the input to another command.
     10. You want to run a command, but you don’t want the output filling up your screen.
     11. You want to create aliases (shortcuts) to commands that you use frequently.
-    
+
+4.  完成上述功能并能够解释，可能会在上课时请你讲解。
