@@ -5,36 +5,47 @@ ssh 学号@129.211.169.165 -p 6000
 
 3.	用linux指令实现下列功能，所有指令放在一个脚本文件中，并验证能够正确执行.验证方法是使用bash hw0_1.sh，观察结果是否输出正确，这里假设你的脚本文件名称是hw0_1.sh。功能需求如下（需要有一定英文基础），
     1.  You want to create a one-line file without having to use an editor.
+
 $ echo "file contents here" > test.txt
 
     2.  You want to create a new directory by using the Terminal.
+
 $ mkdir my_directory
 
     3.  You want to delete a file or directory using the Terminal.
+
 $ rm my_file.txt
 
     4.  You need to change the permissions of a file.
+
 $ chmod u+x file2.txt
 
     5.  Sometimes Python libraries and another software are hosted on the GitHub website or other online Git repository(https://github.com/LeeWilli/emmbedded_development.git). You need to be able to fetch them onto your Raspberry Pi.
+
 $ git clone https://github.com/LeeWilli/emmbedded_development.git
 
     6.  You want to find a file that you know is on the system somewhere.
+
 $ find /home/pi -name gemgem.py
 
     7.  You want to quickly create a file with some text or record a directory listing into a file.
+
 $ ls > myfiles.txt
 
     8.  You have a number of text files, and you want to join them into one big file.
+
 $ cat file1.txt file2.txt file3.txt > full_file.txt
 
     9.  You want to use the output of one Linux command as the input to another command.
+
 $ ls -l *.py | grep Jun
 
     10. You want to run a command, but you don’t want the output filling up your screen.
+
 $ ls > /dev/null
 
     11. You want to create aliases (shortcuts) to commands that you use frequently.
+
 alias L='ls -a'
 
 4.  完成上述功能并能够解释，可能会在上课时请你讲解。
