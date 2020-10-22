@@ -19,10 +19,8 @@ try:
  code where there might be a problem
 except type_of_error:
  code to run if there's an error
-```
-
-
-      3. read the following python and please be ready to explain it for us in the next class.
+``` 
+3. read the following python and please be ready to explain it for us in the next class.
     
 ```
 students = [["Ben", {"Maths": 67, "English": 78, "Science": 72}],
