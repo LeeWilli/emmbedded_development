@@ -20,7 +20,8 @@ try:
 except type_of_error:
  code to run if there's an error
 ``` 
-3. read the following python and please be ready to explain it for us in the next class.
+3. read the following python and please be ready to explain it for us in the next class.  The example's objective is to create a simple database of student
+results at a college. It’ll load some default data, and allow you to edit it
     
 ```
 students = [["Ben", {"Maths": 67, "English": 78, "Science": 72}],
