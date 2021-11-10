@@ -1,7 +1,8 @@
-1. 在自己账户目录下创建子目录hw3，所有要检查的文件都放在这个目录下，文件名字以hw3_1,hw3_2开头，hw3后面的数字表示题号。
-2. problems
-    1. Write a Python to allow users input a number, and decide whether the number is even or odd, and print your results on the terminal.
-    2. read the following python, which is a number-guessing game. Note that this program will throw an error if you enter text that isn’t a number. you need to fix it through using a try statement to catch it.
+make a directory named 'hw3'，and any related files should be placed in it and have to be named with head of 'hw3'，such as 'hw3_1.sh', and etc. As a result, the file named 'hw3_1.sh' should be ~/hw3/hw3_1.sh （‘~' represend the root directory of you account).
+
+
+1. Write a Python to allow users input a number, and decide whether the number is even or odd, and print your results on the terminal.
+2. read the following python, which is a number-guessing game. Note that this program will throw an error if you enter text that isn’t a number. you need to fix it through using a try statement to catch it.
 ```
 import random <br>
 secret = int(random.uniform(0,10))
@@ -20,92 +21,39 @@ try:
 except type_of_error:
  code to run if there's an error
 ``` 
-3. read the following python and please be ready to explain it for us in the next class.  The example's objective is to create a simple database of student
-results at a college. It’ll load some default data, and allow you to edit it
-    
+3. Write a program to prompt for a score between 0.0 and 1.0. If the score is out of range, print an error message. If the score is
+between 0.0 and 1.0, print a grade using the following table:
 ```
-students = [["Ben", {"Maths": 67, "English": 78, "Science": 72}],
-            ["Mark", {"Maths": 56, "Art": 64, "History": 39, "Geography": 55}],
-            ["Paul", {"English": 66, "History": 88}]]
+Score Grade
+>= 0.9 A
+>= 0.8 B
+>= 0.7 C
+>= 0.6 D
+< 0.6  F
+Enter score: 0.95
+A
+Enter score: perfect
+Bad score
+Enter score: 10.0
+Bad score
+Enter score: 0.75
+C
+Enter score: 0.5
+F
+```
+Run the program repeatedly as shown above to test the various different values for
+input
 
-grades = ((0, "FAIL"),(50, "D"),(60,"C"),(70, "B"), (80,"A"), (101, "CHEAT!"))
+4. Write a program which repeatedly reads numbers until the user enters “done”. Once “done” is entered, print out the total, count,
+and average of the numbers. If the user enters anything other than a number, detect their mistake using try and except and print an error
+message and skip to the next number.
+```
+Enter a number: 4
+Enter a number: 5
+Enter a number: bad data
+Invalid input
+Enter a number: 7
+Enter a number: done
+16 3 5.333333333333333
+```
 
-def print_report_card(report_student = None):
-    for student in students:
-        if (student[0] == report_student) or (report_student == None):
-            print("Report card for student ", student[0])            
-            for subject, mark in student[1].items():
-                for grade in grades:
-                    if mark < grade[0]:
-                        print(subject, " : ", prev_grade)
-                        break
-                    prev_grade = grade[1]
-
-
-def add_student(student_name):
-    global students
-    for student in students:
-        if student[0] == student_name:
-            return "Student already in database"
-    students.append([student_name, {}])
-    return "Student added sucessfully"
-
-def add_mark(student_name, subject, mark):
-    global students
-    for student in students:
-        if student[0] == student_name:
-            if subject in student[1].keys():
-                print(student_name, " already has a mark for ", subject)
-                user_input = input("Overwrite Y/N? ")
-                if user_input == "Y" or user_input == "y":
-                    student[1][subject] = mark
-                    return "Student's mark updated"
-                else:
-                    return "Student's mark not updated"
-            else:
-                student[1][subject] = mark
-                return "Student's mark added"
-    return "Student not found"
-
-while True:
-    print("Welcome the the Raspberry Pi student database")
-    print("What can I help you with?")
-    print("Enter 1 to view all report cards")
-    print("Enter 2 to view the report card for a student")
-    print("Enter 3 to add a student")
-    print("Enter 4 to add a mark to a student")
-    print("Enter 5 to exit")
-    
-    try:
-        user_choice = int(input("Choice: "))
-    except ValueError:
-        print("That's not a number I recognise")
-        user_choice = 0
-        
-    if user_choice == 1:
-        print_report_card()
-    elif user_choice == 2:
-        enter_student = input("Which student? ")
-        print_report_card(enter_student)
-    elif user_choice == 3:
-        enter_student = input("Student name? ")
-        print(add_student(enter_student))
-    elif user_choice ==4:
-        enter_student = input("Student name? ")
-        enter_subject = input("Subject? ")
-        num_error = True
-        while num_error:
-            num_error = False
-            try:
-                enter_mark = int(input("Mark? "))
-            except ValueError:
-                print("I don't recognise that as a number")
-                num_error = True
-        print(add_mark(enter_student, enter_subject, enter_mark))
-    elif user_choice == 5:
-        break
-    else:
-        print("Unknown choice")
-    input("Press enter to continue")
-print("Goodbye and thank you for using the Raspberry Pi Student database")
- ```
