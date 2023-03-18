@@ -3,7 +3,7 @@ Make a directory named 'hw2'，and any related files should be placed in it and 
 1. Clone the repository for the class [website](https://github.com/LeeWilli/emmbedded_development).
     1. Explore the version history by visualizing it as a graph.
     2. Who was the last person to modify README.md? (Hint: use git log with an argument).
-    3. What was the commit message associated with the last modification to the collections: line of _config.yml? (Hint: use git blame and git show).
+    3. What was the commit message associated with the last modification to the website: line of hw2.md? (Hint: use git blame and git show).
 
 2. Modify one of cloned files. What happens when you do git stash? What do you see when running git log --all --oneline? Run git stash pop to undo what you did with git stash. In what scenario might this be useful?
 
