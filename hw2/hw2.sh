@@ -7,7 +7,11 @@ git checkout  README.md
 git log
 #1.c
 git blame hw2.md
+#结果
+#5bca7590 (LeeWilli 2020-10-14 23:32:39 +0800 1)
+#ec48329b (LeeWilli 2020-10-14 23:32:02 +0800 2)
 git show 5bca7590
+
 #2
 echo “test01” >> testStash.txt
 git stash 
