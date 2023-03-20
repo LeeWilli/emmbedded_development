@@ -1,26 +1,41 @@
 #!/usr/bin/python3
 '''
-PWM控制信号周期20ms,脉宽0.5ms-2.5ms对应的角度-90到+90度,范围180度(3度左右偏差),当脉宽1.5ms时舵机在中立点(0度)，我们直接用python的GPIO提供的PWM控制。脉宽0.5ms-2.5ms 对应的占空比为2.5% - 12.5% .
+Turning an LED on/off using a push button
 '''
-import RPi.GPIO as GPIO
-import time
-import signal
-import atexit
-atexit.register(GPIO.cleanup) 
-servopin = 18
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(servopin, GPIO.OUT, initial=False)
-p = GPIO.PWM(servopin,50) #50HZ
-p.start(0)
-time.sleep(2)
+# ch01_02.py file
+import wiringpi2 as wiringpi
+# initialize
+wiringpi.wiringPiSetup()
+# define GPIO mode
+GPIO23 = 4
+GPIO24 = 5
+LOW = 0
 
-while(True):
-    for i in range(0,181,10):
-        p.ChangeDutyCycle(2.5 + 10*i/180)
-        time.sleep(1)                      #等该20ms周期结束
-        #p.ChangeDutyCycle(0)                  #归零信号
+HIGH = 1
+OUTPUT = 1
+INPUT = 0
+PULL_DOWN = 1
+wiringpi.pinMode(GPIO23, OUTPUT) # LED
+wiringpi.pinMode(GPIO24, INPUT) # push button
+wiringpi.pullUpDnControl(GPIO24, PULL_DOWN) # pull down
 
-    for i in range(181,0,-10):
-        p.ChangeDutyCycle(2.5 + 10*i/180)
-        time.sleep(1)
-        #p.ChangeDutyCycle(0)                  #归零信号
+# make all LEDs off
+def clear_all():
+ wiringpi.digitalWrite(GPIO23, LOW)
+
+try:
+    clear_all()
+    while 1:
+        button_state = wiringpi.digitalRead(GPIO24)
+        print button_state
+        if button_state == 1:
+            wiringpi.digitalWrite(GPIO23, HIGH)
+        else:
+            wiringpi.digitalWrite(GPIO23, LOW)
+        
+        wiringpi.delay(20)
+    
+ except KeyboardInterrupt:
+    clear_all()
+    
+print("done")
