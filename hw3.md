@@ -3,7 +3,7 @@
     1. Write a Python to allow users input a number, and decide whether the number is even or odd, and print your results on the terminal.
     2. read the following python, which is a number-guessing game. Note that this program will throw an error if you enter text that isn’t a number. you need to fix it through using a try statement to catch it.
 ```
-import random <br>
+import random
 secret = int(random.uniform(0,10))
 print("I'm thinking of a number between zero and ten."
  , "Can you guess what it is?")
