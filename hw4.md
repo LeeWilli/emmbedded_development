@@ -1,6 +1,12 @@
 1. Make "hw4" directory and create python files named hw4_1.py and hw4_2.py, hw4_3.py ... in it if more than one problem are provided.
 2. problems
-    1. If a circuit is connected like Figure 5-1 on page 167 for our textbook, you need to program to implement brightness-level control through PWM. This is achieved by flashing 
-  the LED faster than can be perceived by a human, where the amount of time that the LED remains on, versus off(i.e., the duty cycle) affects 
-  the human-perceived bright-ness level. You need to provide a menu for users' selection as Listing 5-3 did on page 174. With setup command, the delay_on time and the delay_off     time need to be set. The delay_on time is used for the time of LED'brightness remaining high, while the delay_off time is used for the time of LED'brightness remaining low.
+    1. You need to write a python program for blinking LEDs as the following image shows 
+    
+    <img src="imgs/three_leds.jpg" alt="push button">
+    
+    Your code should satisfy the three conditions:
+    
+    1. You should use OOP to define LED like the class definition on page 203 of textbook.
+    2. You need to provide a menu for user to select which led need to be opened or closed.
+    3. You need to write a test code to ensure that your code is right.
   
