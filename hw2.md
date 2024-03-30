@@ -1,4 +1,4 @@
-Make a directory named 'hw2'，and any related files should be placed in it and have to be named with head of 'hw2'，such as 'hw2.sh', and etc. As a result, the file named 'hw2.sh' should be \~/hw2/hw2.sh （‘~' represend the root directory of you account).
+Make a directory named 'hw2'， and any related files should be placed in it and have to be named with a head of 'p1'， such as 'p1.sh', etc. 'p1' represents problem 2 of this homework. As a result, the path of 'p2.sh' should be \~/hw2/p1.sh （‘~' represents the root directory of your account).
 
 1. Clone the repository for the class [website](https://github.com/LeeWilli/emmbedded_development).
     1. Explore the version history by visualizing it as a graph.
