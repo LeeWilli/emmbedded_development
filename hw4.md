@@ -1,4 +1,4 @@
-1. Make "hw4" directory and create python files named hw4_1.py and hw4_2.py, hw4_3.py ... in it if more than one problem are provided.
+1. Make "hw4" directory and create python files named as before.
 2. problem
 
     You need to write a python program for blinking LEDs as the following image shows 
