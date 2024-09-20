@@ -11,3 +11,37 @@ Make a directory named 'hw2'， and any related files should be placed in it and
 There are two improvements:
     1. Like many command line tools, Git provides a configuration file (or dotfile) called ~/.gitconfig. Create an alias in ~/.gitconfig so that when you run git graph, you get the output of git log --all --graph --decorate --oneline. Information about git aliases can be found [here](https://git-scm.com/docs/git-config#Documentation/git-config.txt-alias).
     2. You can define global ignore patterns in ~/.gitignore_global after running git config --global core.excludesfile ~/.gitignore_global. Do this, and set up your global gitignore file to ignore OS-specific or editor-specific temporary files, like .DS_Store.
+
+4. Apply core bash scripting concepts to build a simple file viewer CLI tool
+
+```sh
+#!/bin/bash
+
+# Usage: viewer.sh <file>
+FILE="$1"
+
+# Check if file exists
+if [ ! -f "$FILE" ]; then
+  echo "Error: File not found"
+  exit 1
+fi
+
+# Output file contents  
+echo "Contents of $FILE:"
+cat "$FILE"
+
+# Show file info
+echo -e "\nFile info:"
+ls -l "$FILE"
+```
+You need to enhance the provided file viewer script to handle error cases, print additional file details, and support viewing multiple files as the following steps:
+
+    1. Handle the case when no file argument is passed
+
+    2. Print the file size in a human-readable format
+
+    3. Print the last modified timestamp of the file
+
+    4. Update the script to allow viewing multiple files passed as arguments
+
+    5. Ensure the script works properly with invalid files or paths
