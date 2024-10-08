@@ -1,9 +1,17 @@
-1. Make "hw6" directory and create C++ program files named as before: like p1.cpp
+1. Make "hw5" directory and  create python files named as before
 2. problems
 
-    Listing 6-14 program can be used to communicate to the AM230x/DHT family of sensors to get temperature and humidity. For human beings, there is another kind of temperature: felt air temperature. Can you compute it based on the acquired temperature and humidity from the  AM230x/DHT sensor and show them?     
-You can program based on Listing 6-14, but you need to compare your results with the ones from Central Weather Bureau.
+    Now we will learn how to turn an LED on/off using a push button, 
+which is used as a GPIO input from Raspberry Pi GPIO. A push button connection is diaplayed in the following figure:
 
-    For the computation of felt air temperature, you can reference 'Robert G. Steadman, A universal scale of apparent temperature'. The equation is as follows:
+<img src="imgs/push_button.jpg" alt="push button">
 
-<img src="imgs/air_temperature.jpg" alt="felt air temperature">
+Our hardware wiring is simple. You simply connect the LED to GPIO23 from 
+Raspberry Pi. The push button is connected to Raspberry Pi GPIO on GPIO24. 
+The complete hardware wiring can be seen in the following figure:
+
+<img src="imgs/button_led.jpg" alt="hardware wiring">
+
+Furthermore, you can write a Python program to read the push button's state. If you 
+press the push button, the program will turn on the LED. Otherwise, it will turn off 
+the LED. 

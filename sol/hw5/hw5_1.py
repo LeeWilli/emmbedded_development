@@ -3,7 +3,8 @@
 Turning an LED on/off using a push button
 '''
 # ch01_02.py file
-import wiringpi2 as wiringpi
+import wiringpi as wiringpi
+
 # initialize
 wiringpi.wiringPiSetup()
 # define GPIO mode
@@ -25,9 +26,10 @@ def clear_all():
 
 try:
     clear_all()
+    print("if you push the button, the led will be on.")
     while 1:
         button_state = wiringpi.digitalRead(GPIO24)
-        print button_state
+        #print('button state:', button_state)
         if button_state == 1:
             wiringpi.digitalWrite(GPIO23, HIGH)
         else:
@@ -35,7 +37,7 @@ try:
         
         wiringpi.delay(20)
     
- except KeyboardInterrupt:
+except KeyboardInterrupt:
     clear_all()
     
 print("done")

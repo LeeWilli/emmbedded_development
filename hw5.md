@@ -1,17 +1,13 @@
-1. Make "hw5" directory and  create python files named as before
-2. problems
+1. Make "hw4" directory and create python files named as before.
+2. problem
 
-    Now we will learn how to turn an LED on/off using a push button, 
-which is used as a GPIO input from Raspberry Pi GPIO. A push button connection is diaplayed in the following figure:
-
-<img src="imgs/push_button.jpg" alt="push button">
-
-Our hardware wiring is simple. You simply connect the LED to GPIO23 from 
-Raspberry Pi. The push button is connected to Raspberry Pi GPIO on GPIO24. 
-The complete hardware wiring can be seen in the following figure:
-
-<img src="imgs/button_led.jpg" alt="hardware wiring">
-
-Furthermore, you can write a Python program to read the push button's state. If you 
-press the push button, the program will turn on the LED. Otherwise, it will turn off 
-the LED. 
+    You need to write a python program for blinking LEDs as the following image shows 
+    
+    <img src="imgs/three_leds.jpg" alt="push button">
+    
+    Your code should satisfy the three conditions:
+    
+    1. You should use OOP to define LED like the class definition on page 203 of textbook.
+    2. You need to provide a menu for user to select which led to be opened or closed.
+    3. You need to write a test code to ensure that your code is right.
+  
