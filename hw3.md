@@ -1,4 +1,4 @@
-Make a directory named 'hw3'，and any related files should be placed in it and have to be named with head of 'p' plus a problem number, such as 'p1.sh' which represent a code for problem 1. and etc. As a result, the file named 'p1.sh' should be \~/hw3/p1.sh （‘~' represend the root directory of you account).
+Make a directory named 'hw3'，and any related files should be placed in it and have to be named with head of 'p' plus a problem number, such as 'p1.sh' which represent a code for problem 1. and etc. As a result, the file named 'p1.py' should be \~/hw3/p1.py （‘~' represend the root directory of you account).
 
 
 1. Write a Python to allow users input a number, and decide whether the number is even or odd, and print your results on the terminal.
